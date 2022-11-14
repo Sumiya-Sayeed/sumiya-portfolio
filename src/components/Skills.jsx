@@ -1,6 +1,7 @@
 import React from 'react';
 import {
     Chip,
+    Divider,
     Grid,
     Paper,
     SvgIcon,
@@ -77,6 +78,13 @@ const Skills = (
                             />
                             Skills
                         </Typography>
+                        <Divider
+                            sx={{
+                                backgroundColor: theme.palette.primary.main,
+                                width: '70%',
+                                margin: theme.spacing(1, 0)
+                            }}
+                        />
                         {
                             skill.map(
                                 (
