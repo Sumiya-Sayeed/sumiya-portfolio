@@ -1,23 +1,16 @@
 import React from 'react';
-import { Chip, Grid, Paper, SvgIcon, Typography, useTheme } from '@mui/material';
 import {
-    makeStyles
-} from '@mui/styles';
+    Chip,
+    Grid,
+    Paper,
+    SvgIcon,
+    Typography,
+    useTheme
+} from '@mui/material';
 import LayersIcon from '@mui/icons-material/Layers';
-import { skill } from '../assets/Skills';
-
-const useStyles = makeStyles(
-    theme => (
-        {
-            div: {
-                padding: theme.spacing(2, 0),
-                [theme.breakpoints.down('md')]: {
-                    padding: theme.spacing(1, 0),
-                },
-            }
-        }
-    )
-);
+import {
+    skill
+} from '../assets/Skills';
 
 const Skills = (
     {
@@ -25,8 +18,7 @@ const Skills = (
     }
 ) => {
     const theme = useTheme();
-    const classes = useStyles();
-    console.log('fsdfg', skill)
+
     return (
         <Grid
             item
@@ -76,16 +68,20 @@ const Skills = (
                             variant='h4'
                             color={theme.palette.primary.main}
                         >
-                            <LayersIcon sx={{
-                                verticalAlign: 'middle',
-                                paddingRight: 1,
-                                fontSize: 50
-                            }} />
+                            <LayersIcon
+                                sx={{
+                                    verticalAlign: 'middle',
+                                    paddingRight: 1,
+                                    fontSize: 50
+                                }}
+                            />
                             Skills
                         </Typography>
                         {
                             skill.map(
-                                (k, index) => (
+                                (
+                                    k, index
+                                ) => (
                                     <div
                                         key={index}
                                     >
@@ -98,41 +94,47 @@ const Skills = (
                                         >
                                             {k.label}
                                             {
-                                                k.data.map((
-                                                    i,
-                                                    index1
-                                                ) => (
-                                                    <Chip
-                                                        key={index1}
-                                                        icon={<SvgIcon
-                                                            sx={{
-                                                            }}
-                                                        >
-                                                            <svg
-                                                                xmlns={i.xmlns}
-                                                                viewBox={i.viewbox}
-                                                            >
-                                                                <path d={i.d} />
-                                                            </svg>
-                                                        </SvgIcon>}
-                                                        label={i.label}
-                                                        sx={{
-                                                            padding: 1,
-                                                            margin: 1,
-                                                            backgroundColor: theme.palette.primary.main,
-                                                            '& .MuiChip-icon': {
-                                                                color: theme.palette.secondary.main
-                                                            },
-                                                            '& .MuiChip-root': {
-                                                                height: '50px',
-                                                                color: theme.palette.secondary.main
-                                                            },
-                                                            '& .MuiChip-label': {
-                                                                color: theme.palette.secondary.main
+                                                k.data.map(
+                                                    (
+                                                        i,
+                                                        index1
+                                                    ) => (
+                                                        <Chip
+                                                            key={index1}
+                                                            icon={
+                                                                <SvgIcon
+                                                                    sx={{
+                                                                    }}
+                                                                >
+                                                                    <svg
+                                                                        xmlns={i.xmlns}
+                                                                        viewBox={i.viewbox}
+                                                                    >
+                                                                        <path
+                                                                            d={i.d}
+                                                                        />
+                                                                    </svg>
+                                                                </SvgIcon>
                                                             }
-                                                        }}
-                                                    />
-                                                ))
+                                                            label={i.label}
+                                                            sx={{
+                                                                padding: 1,
+                                                                margin: 1,
+                                                                backgroundColor: theme.palette.primary.main,
+                                                                '& .MuiChip-icon': {
+                                                                    color: theme.palette.secondary.main
+                                                                },
+                                                                '& .MuiChip-root': {
+                                                                    height: '50px',
+                                                                    color: theme.palette.secondary.main
+                                                                },
+                                                                '& .MuiChip-label': {
+                                                                    color: theme.palette.secondary.main
+                                                                }
+                                                            }}
+                                                        />
+                                                    )
+                                                )
                                             }
                                         </Typography>
                                     </div>
