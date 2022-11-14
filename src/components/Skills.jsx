@@ -90,7 +90,7 @@ const Skills = (
                                         key={index}
                                     >
                                         <Typography
-                                            variant='subtitle1'
+                                            variant='body2'
                                             color='#455a64'
                                             sx={{
                                                 padding: 2
