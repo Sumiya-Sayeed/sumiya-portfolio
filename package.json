@@ -14,7 +14,8 @@
     "@mui/material": "^5.9.3",
     "@mui/styled-engine-sc": "^5.8.0",
     "@mui/styles": "^5.8.0",
-    "react-scroll": "^1.8.7"
+    "react-scroll": "^1.8.7",
+    "react-animate-on-scroll": "^2.1.5"
   },
   "scripts": {
     "start": "react-scripts start",
