@@ -1,6 +1,23 @@
 import React from 'react';
-import { Grid, Paper, Typography, useTheme } from '@mui/material';
+import { Grid, Paper, SvgIcon, IconButton, Typography, useTheme } from '@mui/material';
+import {
+    makeStyles
+} from '@mui/styles';
 import SumiyaSayeed from '../assets/SumiyaSayeed.jpg';
+import logos from '../assets/ProfileLogos';
+
+const useStyles = makeStyles(
+    theme => (
+        {
+            div: {
+                padding: theme.spacing(2, 0),
+                [theme.breakpoints.down('md')]: {
+                    padding: theme.spacing(1, 0),
+                },
+            }
+        }
+    )
+);
 
 const Intro = (
     {
@@ -8,6 +25,7 @@ const Intro = (
     }
 ) => {
     const theme = useTheme();
+    const classes = useStyles();
 
     return (
         <Grid
@@ -18,6 +36,7 @@ const Intro = (
             sx={{
                 marginTop: 12,
                 minHeight: 300,
+                height: 'auto',
                 width: '100%',
                 [theme.breakpoints.down('md')]: {
                     marginTop: 10,
@@ -32,9 +51,11 @@ const Intro = (
                     margin: '0px auto',
                     [theme.breakpoints.down('md')]: {
                         width: '95%',
+                        padding: 1,
                     },
                     padding: 2,
-                    height: 300
+                    minHeight: 300,
+                    height: 'auto',
                 }}
             >
                 <Grid
@@ -43,15 +64,16 @@ const Intro = (
                     justifyContent="center"
                     alignItems="center"
                     sx={{
-                        height: 300
+                        minHeight: 300,
+                        height: 'auto',
                     }}
                 >
                     <Grid item
                         sm={12}
                         md={4}
-                        container
                         sx={{
                             display: 'flex',
+                            flexDirection: 'column',
                             justifyContent: 'center',
                             alignItems: 'center',
                             height: 'auto',
@@ -79,7 +101,9 @@ const Intro = (
                             Sumiya Sayeed
                         </Typography>
                     </Grid>
-                    <Grid item sm={12}
+                    <Grid
+                        item
+                        sm={12}
                         md={8}
                         sx={{
                             // display: 'flex',
@@ -98,7 +122,36 @@ const Intro = (
                             I passionately combine good design, technology, and innovation in all my projects.
                             I am obsessed with high quality and attention to detail, and strive to find the best solutions possible. I am also a seasoned competitive programmer. My originality, and creativity is highly valued by my team mates.
                         </Typography>
+                        <div
+                            className={classes.div}
+                        >
+                            {
+                                logos.map((
+                                    i,
+                                    index
+                                ) => (
+                                    <IconButton
+                                        key={index}
+                                        href={i.href}
+                                        sx={{
+                                            color: theme.palette.primary.main
+                                        }}
+                                    >
+                                        <SvgIcon
+                                        >
+                                            <svg
+                                                xmlns={i.xmlns}
+                                                viewBox={i.viewbox}
+                                            >
+                                                <path d={i.d} />
+                                            </svg>
+                                        </SvgIcon>
+                                    </IconButton>
+                                ))
+                            }
+                        </div>
                     </Grid>
+
                 </Grid>
 
             </Paper>
