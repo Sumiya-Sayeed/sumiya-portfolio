@@ -1,7 +1,6 @@
 import React from 'react';
 import {
     Stack,
-    Item,
     Chip,
     Divider,
     Grid,
@@ -68,12 +67,7 @@ const Skills = (
                             display: 'flex',
                             flexDirection: 'column',
                             justifyContent: 'center',
-                            // alignItems: 'center',
-                            // height: 'auto',
-                            // margin: 'auto'
                         }}
-                    // sm={12}
-                    // md={4}
                     >
                         <Typography
                             variant='h4'
@@ -88,32 +82,8 @@ const Skills = (
                             />
                             Skills
                         </Typography>
-                        {/* <Divider
-                            sx={{
-                                backgroundColor: theme.palette.primary.main,
-                                width: '70%',
-                                margin: theme.spacing(1, 0)
-                            }}
-                        /> */}
                     </div>
-                    {/* <Grid
-                        sm={12}
-                        md={8}
-                    > */}
-                    {/* <Divider
-                        orientation="vertical"
-                        sx={{
-                            backgroundColor: theme.palette.primary.main,
-                            // width: '70%',
-                            // margin: theme.spacing(1, 0)
-                        }}
-                        flexItem
-                    /> */}
-                    {/* </Grid> */}
-                    <div
-                    // sm={12}
-                    // md={8}
-                    >
+                    <div>
                         {
                             skill.map(
                                 (
@@ -180,7 +150,6 @@ const Skills = (
                         }
                     </div>
                 </Stack>
-
             </Paper>
         </Grid >
     )
