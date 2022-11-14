@@ -1,5 +1,12 @@
 import React from 'react';
-import { Grid, Paper, SvgIcon, IconButton, Typography, useTheme } from '@mui/material';
+import {
+    Grid,
+    Paper,
+    SvgIcon,
+    IconButton,
+    Typography,
+    useTheme
+} from '@mui/material';
 import {
     makeStyles
 } from '@mui/styles';
@@ -102,7 +109,7 @@ const Intro = (
                         <Typography
                             variant='body2'
                             sx={{
-                                color: '#455a64',
+                                color: theme.palette.primary.dark,
                                 padding: theme.spacing(0, 0, 1, 0)
                             }}
                         >
@@ -119,7 +126,8 @@ const Intro = (
                             // alignItems: 'center',
                             height: 'auto',
                             margin: 'auto',
-                            padding: 2
+                            padding: 2,
+                            color: theme.palette.primary.dark,
                         }}
                     >
                         <Typography
