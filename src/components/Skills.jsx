@@ -1,5 +1,7 @@
 import React from 'react';
 import {
+    Stack,
+    Item,
     Chip,
     Divider,
     Grid,
@@ -51,19 +53,27 @@ const Skills = (
                     height: 'auto',
                 }}
             >
-                <Grid
-                    container
+                <Stack
                     direction="row"
-                    justifyContent="center"
-                    alignItems="center"
+                    divider={<Divider orientation="vertical" flexItem
+                    />}
+                    spacing={2}
                     sx={{
                         minHeight: 300,
                         height: 'auto',
                     }}
                 >
-                    <Grid
-                        item
-                        xs={12}
+                    <div
+                        style={{
+                            display: 'flex',
+                            flexDirection: 'column',
+                            justifyContent: 'center',
+                            // alignItems: 'center',
+                            // height: 'auto',
+                            // margin: 'auto'
+                        }}
+                    // sm={12}
+                    // md={4}
                     >
                         <Typography
                             variant='h4'
@@ -78,13 +88,32 @@ const Skills = (
                             />
                             Skills
                         </Typography>
-                        <Divider
+                        {/* <Divider
                             sx={{
                                 backgroundColor: theme.palette.primary.main,
                                 width: '70%',
                                 margin: theme.spacing(1, 0)
                             }}
-                        />
+                        /> */}
+                    </div>
+                    {/* <Grid
+                        sm={12}
+                        md={8}
+                    > */}
+                    {/* <Divider
+                        orientation="vertical"
+                        sx={{
+                            backgroundColor: theme.palette.primary.main,
+                            // width: '70%',
+                            // margin: theme.spacing(1, 0)
+                        }}
+                        flexItem
+                    /> */}
+                    {/* </Grid> */}
+                    <div
+                    // sm={12}
+                    // md={8}
+                    >
                         {
                             skill.map(
                                 (
@@ -149,11 +178,11 @@ const Skills = (
                                 )
                             )
                         }
-                    </Grid>
-                </Grid>
+                    </div>
+                </Stack>
 
             </Paper>
-        </Grid>
+        </Grid >
     )
 };
 
