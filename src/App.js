@@ -9,7 +9,7 @@ const theme = createTheme({
 	palette: {
 		primary: {
 			main: '#0D4C92', //lighter green
-			dark: '#1b5e20', //darker green
+			dark: '#455a64', //darker green
 			light: '#e8f5e9' //lightest green for poppers
 		},
 		secondary: {
