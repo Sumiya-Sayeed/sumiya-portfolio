@@ -9,6 +9,7 @@ import {
     IconButton,
     Button,
     Drawer,
+    useTheme
 } from '@mui/material';
 import {
     Clear,
@@ -23,6 +24,7 @@ import {
 import options from '../../assets/Menu';
 
 const AppbarForSmall = () => {
+    const theme = useTheme();
     const [
         anchorEl,
         setAnchorEl
@@ -54,14 +56,20 @@ const AppbarForSmall = () => {
             <Toolbar>
                 <div
                     onClick={scrollToTop}
-
+                    style={{
+                        flexGrow: 1,
+                        color: theme.palette.primary.light,
+                    }}
                 >
-                    Sumiya
+                    Sumiya Sayeed
                 </div>
                 <IconButton
                     aria-owns={open ? 'fade-menu' : null}
                     aria-haspopup="true"
                     onClick={handleClick}
+                    sx={{
+                        color: theme.palette.primary.light,
+                    }}
                 >
                     <Menu />
                 </IconButton>
@@ -72,6 +80,11 @@ const AppbarForSmall = () => {
                     anchor='right'
                     transitionDuration={500}
                     onClose={handleClose}
+                    sx={{
+                        '& .MuiPaper-root': {
+                            width: '80%'
+                        }
+                    }}
                 // TransitionComponent={Fade}
                 >
                     {options.map(option => (
@@ -81,14 +94,20 @@ const AppbarForSmall = () => {
                         <Link
                             onClick={handleClose}
                             key={option.path}
-                            // activeClass="active"
+                            activeClass="active"
                             spy={true}
                             smooth={true}
                             offset={-70}
                             duration={2000}
                             to={option.path}
                         >
-                            {option.menu}
+                            <Button
+                                sx={{
+                                    color: theme.palette.primary.main
+                                }}
+                            >
+                                {option.menu}
+                            </Button>
                         </Link>
                         // </Link>
                     ))}
