@@ -90,15 +90,23 @@ const Intro = (
                                 borderRadius: 10,
                             }}
                         />
-
                         <Typography
                             variant='h6'
                             sx={{
                                 color: theme.palette.primary.main,
-                                padding: theme.spacing(1, 0)
+                                padding: theme.spacing(1, 0, 0, 0)
                             }}
                         >
                             Sumiya Sayeed
+                        </Typography>
+                        <Typography
+                            variant='body2'
+                            sx={{
+                                color: '#455a64',
+                                padding: theme.spacing(0, 0, 1, 0)
+                            }}
+                        >
+                            Software Engineer(Frontend Developer)
                         </Typography>
                     </Grid>
                     <Grid
