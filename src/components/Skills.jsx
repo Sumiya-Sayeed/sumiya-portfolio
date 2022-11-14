@@ -1,10 +1,9 @@
 import React from 'react';
-import { Chip, Grid, Paper, SvgIcon, IconButton, Typography, useTheme } from '@mui/material';
+import { Chip, Grid, Paper, SvgIcon, Typography, useTheme } from '@mui/material';
 import {
     makeStyles
 } from '@mui/styles';
 import LayersIcon from '@mui/icons-material/Layers';
-import SumiyaSayeed from '../assets/SumiyaSayeed.jpg';
 import { skill } from '../assets/Skills';
 
 const useStyles = makeStyles(
@@ -87,10 +86,12 @@ const Skills = (
                         {
                             skill.map(
                                 (k, index) => (
-                                    <>
+                                    <div
+                                        key={index}
+                                    >
                                         <Typography
-                                            variant='h6'
-                                            color={theme.palette.primary.main}
+                                            variant='subtitle1'
+                                            color='#455a64'
                                             sx={{
                                                 padding: 2
                                             }}
@@ -99,10 +100,13 @@ const Skills = (
                                             {
                                                 k.data.map((
                                                     i,
-                                                    index
+                                                    index1
                                                 ) => (
                                                     <Chip
+                                                        key={index1}
                                                         icon={<SvgIcon
+                                                            sx={{
+                                                            }}
                                                         >
                                                             <svg
                                                                 xmlns={i.xmlns}
@@ -112,11 +116,26 @@ const Skills = (
                                                             </svg>
                                                         </SvgIcon>}
                                                         label={i.label}
+                                                        sx={{
+                                                            padding: 1,
+                                                            margin: 1,
+                                                            backgroundColor: theme.palette.primary.main,
+                                                            '& .MuiChip-icon': {
+                                                                color: theme.palette.secondary.main
+                                                            },
+                                                            '& .MuiChip-root': {
+                                                                height: '50px',
+                                                                color: theme.palette.secondary.main
+                                                            },
+                                                            '& .MuiChip-label': {
+                                                                color: theme.palette.secondary.main
+                                                            }
+                                                        }}
                                                     />
                                                 ))
                                             }
                                         </Typography>
-                                    </>
+                                    </div>
                                 )
                             )
                         }
