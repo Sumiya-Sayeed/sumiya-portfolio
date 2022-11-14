@@ -94,7 +94,7 @@ const Skills = (
                                     >
                                         <Typography
                                             variant='body2'
-                                            color='#455a64'
+                                            color={theme.palette.primary.dark}
                                             sx={{
                                                 padding: 2
                                             }}
