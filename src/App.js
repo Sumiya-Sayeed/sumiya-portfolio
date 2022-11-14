@@ -30,7 +30,7 @@ const styles = {
 			maxWidth: '100vw',
 			height: 'auto',
 			minHeight: '100vh',
-			// overflowX: 'hidden',
+			overflowX: 'hidden',
 			padding: 0,
 			margin: 0,
 			backgroundColor: '#eceff1',
