@@ -49,8 +49,12 @@ const Experiences = (
             >
                 <Stack
                     direction="row"
-                    divider={<Divider orientation="vertical" flexItem
-                    />}
+                    divider={
+                        <Divider
+                            orientation="vertical"
+                            flexItem
+                        />
+                    }
                     spacing={2}
                     sx={{
                         minHeight: 200,
