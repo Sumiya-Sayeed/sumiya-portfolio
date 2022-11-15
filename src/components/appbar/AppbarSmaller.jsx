@@ -2,18 +2,14 @@ import React, {
     useState
 } from 'react';
 import {
-    MenuItem,
     AppBar,
     Toolbar,
-    SvgIcon,
     IconButton,
     Button,
     Drawer,
     useTheme
 } from '@mui/material';
 import {
-    Clear,
-    ExpandMore,
     Menu,
     // Search
 } from '@mui/icons-material';
