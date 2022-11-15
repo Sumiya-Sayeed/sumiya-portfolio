@@ -1,5 +1,7 @@
 import React from "react";
-import { Grid, Paper, useTheme } from '@mui/material';
+import {
+    Grid
+} from '@mui/material';
 import Appbar from './appbar';
 import Intro from './Intro';
 import Skills from './Skills';
