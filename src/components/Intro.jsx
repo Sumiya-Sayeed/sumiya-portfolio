@@ -121,9 +121,6 @@ const Intro = (
                         sm={12}
                         md={8}
                         sx={{
-                            // display: 'flex',
-                            // justifyContent: 'flex-start',
-                            // alignItems: 'center',
                             height: 'auto',
                             margin: 'auto',
                             padding: 2,
@@ -142,34 +139,34 @@ const Intro = (
                             className={classes.div}
                         >
                             {
-                                logos.map((
-                                    i,
-                                    index
-                                ) => (
-                                    <IconButton
-                                        key={index}
-                                        href={i.href}
-                                        sx={{
-                                            color: theme.palette.primary.main
-                                        }}
-                                    >
-                                        <SvgIcon
+                                logos.map(
+                                    (
+                                        i,
+                                        index
+                                    ) => (
+                                        <IconButton
+                                            key={index}
+                                            href={i.href}
+                                            sx={{
+                                                color: theme.palette.primary.main
+                                            }}
                                         >
-                                            <svg
-                                                xmlns={i.xmlns}
-                                                viewBox={i.viewbox}
+                                            <SvgIcon
                                             >
-                                                <path d={i.d} />
-                                            </svg>
-                                        </SvgIcon>
-                                    </IconButton>
-                                ))
+                                                <svg
+                                                    xmlns={i.xmlns}
+                                                    viewBox={i.viewbox}
+                                                >
+                                                    <path d={i.d} />
+                                                </svg>
+                                            </SvgIcon>
+                                        </IconButton>
+                                    )
+                                )
                             }
                         </div>
                     </Grid>
-
                 </Grid>
-
             </Paper>
         </Grid>
     )
