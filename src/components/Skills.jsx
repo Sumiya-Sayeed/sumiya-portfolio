@@ -9,7 +9,6 @@ import {
     Typography,
     useTheme
 } from '@mui/material';
-import LayersIcon from '@mui/icons-material/Layers';
 import {
     skill
 } from '../assets/Skills';
