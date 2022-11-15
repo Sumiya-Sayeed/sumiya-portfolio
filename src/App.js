@@ -1,7 +1,6 @@
 import React from 'react';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import { withStyles } from '@mui/styles';
-import { CssBaseline } from '@mui/material';
 import Layout from './components/Layout';
 
 
