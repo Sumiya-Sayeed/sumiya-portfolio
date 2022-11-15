@@ -74,6 +74,11 @@ const Skills = (
                             variant='h4'
                             align='center'
                             color={theme.palette.primary.main}
+                            sx={{
+                                [theme.breakpoints.down('sm')]: {
+                                    fontSize: '1rem'
+                                },
+                            }}
                         >
                             <img
                                 src={Skill}
