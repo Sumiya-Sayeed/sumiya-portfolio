@@ -13,6 +13,7 @@ import LayersIcon from '@mui/icons-material/Layers';
 import {
     skill
 } from '../assets/Skills';
+import Skill from '../assets/Skills.png';
 
 const Skills = (
     {
@@ -71,15 +72,20 @@ const Skills = (
                     >
                         <Typography
                             variant='h4'
+                            align='center'
                             color={theme.palette.primary.main}
                         >
-                            <LayersIcon
+                            <img
+                                src={Skill}
+                                alt="freepik"
+                                height={50}
+                                width={50}
                                 sx={{
                                     verticalAlign: 'middle',
                                     paddingRight: 1,
-                                    fontSize: 50
                                 }}
                             />
+                            <br />
                             Skills
                         </Typography>
                     </div>
