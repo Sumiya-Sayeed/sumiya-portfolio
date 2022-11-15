@@ -5,6 +5,7 @@ import Intro from './Intro';
 import Skills from './Skills';
 import Projects from "./Projects";
 import Experience from "./Experience";
+import Education from "./Education";
 
 const Layout = () => {
     document.title = "Sumiya Sayeed";
@@ -27,6 +28,7 @@ const Layout = () => {
                 <Skills id="Skills" />
                 <Projects id="Projects" />
                 <Experience id="Experience" />
+                <Education id="Education" />
             </Grid>
         </>
     )
