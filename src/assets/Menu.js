@@ -4,16 +4,16 @@ const options = [
         path: 'Intro',
     },
     {
-        menu: 'Experience',
-        path: 'Experience',
+        menu: 'Skills',
+        path: 'Skills',
     },
     {
         menu: 'Projects',
         path: 'Projects',
     },
     {
-        menu: 'Skills',
-        path: 'Skills',
+        menu: 'Experience',
+        path: 'Experience',
     },
     {
         menu: 'Education',
