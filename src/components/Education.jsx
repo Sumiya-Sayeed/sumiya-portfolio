@@ -27,6 +27,7 @@ const Educations = (
                 minHeight: 200,
                 height: 'auto',
                 width: '100%',
+                marginBottom: 12,
                 [theme.breakpoints.down('md')]: {
                     marginTop: 10,
                 },
@@ -99,7 +100,7 @@ const Educations = (
                             variant='h6'
                             color={theme.palette.primary.main}
                         >
-                            {`Bachelor of Science in Computer Science and Engineering(Graduated in 2017)`}
+                            {`Bachelor of Science in Computer Science and Engineering`}
                         </Typography>
                         <Typography
                             variant='subtitle1'
