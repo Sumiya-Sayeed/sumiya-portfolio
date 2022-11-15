@@ -106,7 +106,6 @@ const Educations = (
                             color={theme.palette.primary.dark}
                         >
                             {`Stamford University Bangladesh(Graduated in 2017)`}
-
                         </Typography>
                     </div>
                 </Stack>
