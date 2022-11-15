@@ -10,7 +10,6 @@ import {
     useTheme,
     Link
 } from '@mui/material';
-import LayersIcon from '@mui/icons-material/Layers';
 import {
     projects
 } from '../assets/Projects';
@@ -22,7 +21,7 @@ const Projects = (
     }
 ) => {
     const theme = useTheme();
-    console.log('sfsdg', projects)
+
     return (
         <Grid
             item
